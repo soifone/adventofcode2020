@@ -3,8 +3,8 @@ package main
 import "testing"
 
 func TestCheckForSumPairAndMultiply(t *testing.T) {
-	for _, tc := range []struct{
-		list []int
+	for _, tc := range []struct {
+		list      []int
 		sum, want int
 	}{
 		{
@@ -17,7 +17,7 @@ func TestCheckForSumPairAndMultiply(t *testing.T) {
 			45,
 			396,
 		},
-	}{
+	} {
 		got, err := checkForSumPairAndMultiply(tc.list, tc.sum)
 		if err != nil {
 			t.Fatal(err)
@@ -30,8 +30,8 @@ func TestCheckForSumPairAndMultiply(t *testing.T) {
 }
 
 func TestCheckForTripletSumMultiply(t *testing.T) {
-	for _, tc := range []struct{
-		list []int
+	for _, tc := range []struct {
+		list      []int
 		sum, want int
 	}{
 		{
@@ -44,7 +44,7 @@ func TestCheckForTripletSumMultiply(t *testing.T) {
 			19,
 			120,
 		},
-	}{
+	} {
 		got, err := checkForTripletsSumAndMultiply(tc.list, tc.sum)
 		if err != nil {
 			t.Fatal(err)
