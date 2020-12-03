@@ -283,11 +283,11 @@ func checkForSumPairAndMultiply(items []int, sum int) (int, error) {
 	m := make(map[int]bool, len(items))
 	for _, item := range items {
 		d := sum - item
-		if m[item] {
+		if m[d] {
 			return d * item, nil
 		}
 
-		m[d] = true
+		m[item] = true
 	}
 
 	return 0, fmt.Errorf("no pair found")
